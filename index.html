@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="script.js" charset="utf-8"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+
+	<title>Air Quality Display</title>
+</head>
+
+<body>
+	<div class="jumbotron">
+		<h1 class="head-1 display-2">Air Quality Display</h1>
+		<h3 class="sub-head">A realtime display of air quality in your area</h3>
+	</div>
+
+	<div class="container bg-back">
+		<div class="row">
+			<div class="col-lg-4"><br><a href="how-to-stay-safe.html" class="btn btn-primary btn-lg">How To Stay Safe</a><br><br></div>
+			<div class="col-lg-4"><br><a href="#" onclick="handleButtonClick()" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal-display">Find Your Air Quality Index</a><br><br></div>
+			<div class="col-lg-4"><br><a href="how-to-help.html" class="btn btn-primary btn-lg">How To Help</a><br><br></div>
+		</div>
+
+		<p class="font-weight-light credits">Created by Dev Sharma. Powered by <a href="https://openaq.org" target="_blank">OpenAQ.org</a>. Designed using <a href="https://getbootstrap.com" target="_blank">Bootstrap 4.</a></p>
+	</div>
+
+	<div class="modal" id="modal-display">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<!-- Modal Header -->
+				<div class="modal-header">
+					<h4 class="modal-title" style="color: #000;">Your Current Air Quality</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+
+				<!-- Modal body -->
+				<div class="modal-body" style="color: #000;">
+					<div id="modal-display-container">
+						<p id="modal-body-content">
+							<span id="aqi-display" class="decor-api"></span><br>
+							<span id="category-display" class="decor-api"></span>
+							<span id="extra-info" style="display: none">Extra information is currently unavailable</span><br>
+							<a id="show-info" class="small" href="#" onclick="handleShowInformation();">▼ Show More</a>
+						</p>
+					</div>
+				</div>
+
+				<!-- Modal footer -->
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

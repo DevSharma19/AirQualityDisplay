@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-image: url("images/background-smoke.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.jumbotron {
+  background-color: #21618C !important;
+  color: #fff !important;
+  text-align: center;
+}
+
+.head-1 {
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 2px;
+  text-shadow: 0 4px 8px black;
+}
+
+.sub-head {
+  font-family: 'Open Sans', sans-serif;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  font-style: italic;
+}
+
+.bg-back {
+  background-color: #85C1E9;
+  color: #fff;
+  text-align: center;
+  padding: 25px 15px;
+  margin-top: 100px;
+}
+
+.decor-api {
+  font-size: 20px;
+  font-style: bold;
+  color: #21618C;
+}
+
+.page-head-1 {
+  color: #21618C !important;
+  text-decoration: underline;
+  letter-spacing: 2px;
+  word-spacing: 1px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+.head-one {
+  font-family: 'Open Sans', sans-serif;
+  text-transform: capitalize;
+  text-decoration: underline;
+  padding: 3px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.para {
+  font-size: 18px;
+  font-family: 'Open sansa', sans-serif;
+  color: #21618C;
+  letter-spacing: 2px;
+  margin: 4px;
+  padding: 4px;
+}
+
+.list-group-item {
+  background-color: #85C1E960
+}
+
+.credits {
+  letter-spacing: 2px;
+}
+
+.btn-home {
+  margin-top: 10px;
+  margin-left: 10px;
+}
