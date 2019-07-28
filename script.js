@@ -90,8 +90,12 @@ function getMeasurements() {
                   var country = data.results[0].country;
                   var distance = data.results[0].distance;
                   var parameters = [];
+                  var dateUpdates = [];
                   for (var i = 0; i < measurements.length; i++) {
                     parameters.push(measurements[i].parameter);
+
+                    var date = measurements[i].lastUpdated;
+                    dateUpdates.push(date.slice(8, 10) + "/" + date.slice(5, 7) + "/" + date.slice(0, 4));
                   }
 
                   document.getElementById('extra-info').innerHTML = "Your location was found at " + lat.toFixed(2) + ", " + long.toFixed(2) + "<br>";
@@ -99,8 +103,8 @@ function getMeasurements() {
                   document.getElementById('extra-info').innerHTML += "The location is located in " + city + ", " + country + "<br>";
                   document.getElementById('extra-info').innerHTML += "The location is " + distance.toFixed() + "m away from you" + "<br>";
                   document.getElementById('extra-info').innerHTML += "The data included the following parameters : ";
-                  for (parameter of parameters) {
-                    document.getElementById('extra-info').innerHTML += parameter + ", "
+                  for (var i = 0; i < parameters.length; i++) {
+                    document.getElementById('extra-info').innerHTML += parameters[i].toUpperCase() + " (" + dateUpdates[i] + ")" + ", "
                   }
                 }
               }
